@@ -26,13 +26,13 @@
         "test": "jest"
     },
     "keywords": [
-        "end-to-end",
-        "tests",
+        "end-to-end-testing",
+        "testing",
         "jest",
         "puppeteer",
-        "selimum",
+        "selenium",
         "headless-chrome",
-        "chrome"
+        "chromium"
     ],
     "dependencies": {
         "dateformat": "^2.0.0",
