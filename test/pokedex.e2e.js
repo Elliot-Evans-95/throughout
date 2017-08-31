@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 const settings = require('../helpers/settings');
 const browserHelper = require('../helpers/browser');
 
-const CONTROL_PANEL_URL = 'https://www.pokedex.org/';
+const SITE_URL = 'https://www.pokedex.org/';
 
 describe('Given this is a test', () => {
 
@@ -15,7 +15,7 @@ describe('Given this is a test', () => {
         page = await browser.newPage();
         debug = await browserHelper.debug('Pokedex PWA Test', page);
 
-        await page.goto(CONTROL_PANEL_URL);
+        await page.goto(SITE_URL);
     });
 
     describe('When the user clicks the pokemon link', () => {
