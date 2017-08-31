@@ -11,7 +11,6 @@
 To use Throughout in your project, run:
 ```
 yarn add throughout
-npm i throughout
 ```
 
 > **Note**: Puppeteer downloads Chromium.
@@ -63,9 +62,9 @@ describe('Given this is a test', () => {
 
 ## Default settings
 
-**1. Uses Headless mode**
-**2. Runs a bundled version of Chromium**
-**3. Runs tests in parallel**
+* Uses Headless mode
+* Runs a bundled version of Chromium
+* Runs tests in parallel
 
 ## Contributors
 
