@@ -1,0 +1,53 @@
+{
+    "name": "throughout",
+    "version": "0.0.1",
+    "main": "helpers/browser.js",
+    "contributors": [
+      {
+        "name" : "Elliot Evans",
+        "email" : "ell15evans.nuls@googlemail.com",
+        "url" : "https://github.com/Elliot-Evans-95"
+      },
+      {
+        "name" : "Matt Kemp",
+        "url" : "https://github.com/techmatt101"
+      }
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Elliot-Evans-95/throughout/issues"
+    },
+    "homepage": "https://github.com/Elliot-Evans-95/throughout",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Elliot-Evans-95/throughout.git"
+    },
+    "scripts": {
+        "test": "jest"
+    },
+    "keywords": [
+        "end-to-end",
+        "tests",
+        "jest",
+        "puppeteer",
+        "selimum",
+        "headless-chrome",
+        "chrome"
+    ],
+    "dependencies": {
+        "dateformat": "^2.0.0",
+        "fs-extra": "^4.0.1",
+        "jest": "^21.0.0-beta.1",
+        "puppeteer": "^0.10.1",
+        "sync": "^0.2.5"
+    },
+    "devDependencies": {
+        "@types/jest": "^20.0.8"
+    },
+    "jest": {
+        "setupTestFrameworkScriptFile": "./bootstrap.js",
+        "testMatch": [
+            "**/*.e2e.js"
+        ]
+    }
+}
