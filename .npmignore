@@ -2,3 +2,5 @@
 *debug
 type.d.ts
 .gitignore
+.idea
+.DS_Store
