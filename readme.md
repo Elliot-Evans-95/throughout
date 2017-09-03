@@ -1,4 +1,4 @@
-# Throughout
+# Throughout ![Travis build status](https://travis-ci.org/Elliot-Evans-95/throughout.svg?branch=master)
 
 End-to-end testing made simple
 
