@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
-const settings = require('../helpers/settings');
-const browserHelper = require('../helpers/browser');
+const settings = require('../src/settings');
+const browserHelper = require('../src/browser');
 
 const SITE_URL = 'https://www.pokedex.org/';
 

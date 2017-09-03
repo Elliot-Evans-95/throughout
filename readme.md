@@ -30,8 +30,8 @@ Here is an example of a test
 
 ```js
 const puppeteer = require('puppeteer');
-const settings = require('../helpers/settings');
-const browserHelper = require('../helpers/browser');
+const settings = require(src);
+const browserHelper = require(src);
 
 const SITE_URL = 'https://www.pokedex.org/';
 

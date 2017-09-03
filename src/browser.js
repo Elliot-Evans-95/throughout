@@ -1,8 +1,8 @@
 const dateFormat = require('dateformat');
-const fs = require('fs-extra');
-const path = require('path');
 const date = dateFormat(new Date(), 'yyyy-mm-dd-HH-MM-ss');
 const debugFolder = './debug';
+const fs = require('fs-extra');
+const path = require('path');
 
 module.exports = {
     debug,
