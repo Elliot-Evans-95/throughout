@@ -1,17 +1,17 @@
 {
-    "name": "throughout",
-    "version": "0.0.3",
+    "name": "throughout-chrome",
+    "version": "0.0.4",
     "main": "helpers/browser.js",
     "contributors": [
-      {
-        "name" : "Elliot Evans",
-        "email" : "ell15evans.nuls@googlemail.com",
-        "url" : "https://github.com/Elliot-Evans-95"
-      },
-      {
-        "name" : "Matt Kemp",
-        "url" : "https://github.com/techmatt101"
-      }
+        {
+            "name": "Elliot Evans",
+            "email": "ell15evans.nuls@googlemail.com",
+            "url": "https://github.com/Elliot-Evans-95"
+        },
+        {
+            "name": "Matt Kemp",
+            "url": "https://github.com/techmatt101"
+        }
     ],
     "license": "MIT",
     "bugs": {
@@ -37,8 +37,8 @@
     "dependencies": {
         "dateformat": "^2.0.0",
         "fs-extra": "^4.0.1",
-        "jest": "^21.0.0-beta.1",
-        "puppeteer": "^0.10.1",
+        "jest": "^20.0.4",
+        "puppeteer": "^0.10.2",
         "sync": "^0.2.5"
     },
     "devDependencies": {

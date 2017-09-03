@@ -1,6 +1,6 @@
 # Throughout
 
-### End-to-end testing made simple
+End-to-end testing made simple
 
 > Throughout combines [Jest](https://facebook.github.io/jest/) and [Puppeteer](https://github.com/GoogleChrome/puppeteer) to create a FAST End to End testing environment.
 
@@ -8,9 +8,16 @@
 
 > *Note: Throughout requires at least Node v6.4.0 due to Puppeteer
 
-To use Throughout in your project, run:
+To install Throughout using NPM:
+
 ```
-yarn add throughout
+npm i throughout-chrome
+```
+
+To install Throughout using Yarn:
+
+```
+yarn add throughout-chrome
 ```
 
 > **Note**: Puppeteer downloads Chromium.
