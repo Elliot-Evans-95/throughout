@@ -21,3 +21,8 @@ install_text: |
 ---
 
 # Hello World
+
+## To publish to NPM:
+```
+npm-publish-scripts publish-release
+```
