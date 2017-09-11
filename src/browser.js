@@ -46,7 +46,7 @@ async function debug(testName, page) {
         cleaned = true;
 
         if (hasFailed) {
-            console.log(`>> DEBUG INFO ${folder.replace('D:\\', '\\\\CI\\d$\\')}`);
+            console.log(`DEBUG INFO: ${folder}`);
 
             try {
                 let buildErrorMessages = Promise.all(errors.map(async error => {
