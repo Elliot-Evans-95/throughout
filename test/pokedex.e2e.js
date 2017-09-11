@@ -9,9 +9,10 @@ describe('Given this is a test', () => {
     let debug;
 
     beforeAll(async () => {
-        browser = await puppeteer.launch(settings.browser);
+        browser = await puppeteer.launch(browserHelper.settings);
         page = await browser.newPage();
         debug = await browserHelper.debug('Pokedex PWA Test', page);
+        browserHelper.setDesktopDefaults(page);
 
         await page.goto(url.POKEMON);
     });

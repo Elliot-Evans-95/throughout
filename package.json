@@ -1,6 +1,6 @@
 {
     "name": "throughout-chrome",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "main": "helpers/browser.js",
     "contributors": [
         {
@@ -45,9 +45,15 @@
         "@types/jest": "^20.0.8"
     },
     "jest": {
-        "setupTestFrameworkScriptFile": "./bootstrap.js",
+        "setupTestFrameworkScriptFile": "./testBed/bootstrap.js",
         "testMatch": [
             "**/*.e2e.js"
+        ],
+        "modulePathIgnorePatterns": [
+          "./tmp"
+        ],
+        "roots": [
+          "./test"
         ]
     }
 }
