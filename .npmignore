@@ -5,7 +5,7 @@ type.d.ts
 .idea
 .DS_Store
 .travis.yml
+.ruby-version
 docs
 Gemfile
 Gemfile.lock
-.ruby-version

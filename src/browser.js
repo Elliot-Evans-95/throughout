@@ -2,7 +2,7 @@ const dateFormat = require('dateformat');
 const fs = require('fs-extra');
 const path = require('path');
 const date = dateFormat(new Date(), 'yyyy-mm-dd-HH-MM-ss');
-const debugFolder = 'D:\\codeweavers\\SmokeTests';
+const debugFolder = './debug';
 
 if (!fs.existsSync(debugFolder)) {
     fs.mkdirSync(debugFolder);
