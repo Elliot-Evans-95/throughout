@@ -30,41 +30,40 @@ Here is an example of a test
 
 ```js
 const puppeteer = require('puppeteer');
-const settings = require(src);
-const browserHelper = require(src);
+const browserHelper = require('throughout-chrome/src/browser');
 
-const SITE_URL = 'https://www.pokedex.org/';
+describe("Given this is a test", () => {
 
-describe('Given this is a test', () => {
+  let page;
+  let browser;
+  let debug;
 
-    let page;
-    let browser;
-    let debug;
+  beforeAll(async () => {
+    browser = await puppeteer.launch(browserHelper.settings);
+    page = await browser.newPage();
+    debug = await browserHelper.debug(`Pokedex PWA Test`, page);
+    browserHelper.setDesktopDefaults(page);
+
+    await page.goto(`https://www.pokedex.org/`);
+  });
+
+  describe("When the user clicks the pokemon link", () => {
 
     beforeAll(async () => {
-        browser = await puppeteer.launch(settings.browser);
-        page = await browser.newPage();
-        debug = await browserHelper.debug('Pokedex PWA Test', page);
-
-        await page.goto(SITE_URL);
+      await page.click('#pokemon-link');
     });
 
-    describe('When the user clicks the pokemon link', () => {
-
-        beforeAll(async () => {
-            await page.click('#pokemon-link');
-        });
-
-        it('Then the pokemon list should be visible', async () => {
-            expect(await page.$('#monsters-list')).toBeTruthy();
-        });
+    it("Then the pokemon list should be visible", async () => {
+      expect(await page.$('#monsters-list')).toBeTruthy();
     });
+  });
 
-    afterAll(async () => {
-        await debug.cleanup();
-        browser.close();
-    });
+  afterAll(async () => {
+    await debug.cleanup();
+    browser.close();
+  });
 });
+
 ```
 
 ## Default settings
@@ -75,4 +74,4 @@ describe('Given this is a test', () => {
 
 ## Contributors
 
-Throughout was made by Myself & [Matt Kemp](https://github.com/techmatt101)
+Throughout was made by [Elliot Evans](https://github.com/elliot-evans-95)
