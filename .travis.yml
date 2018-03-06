@@ -6,6 +6,3 @@ install:
 
 script:
   - npm run test
-
-after_script:
-- if [[ "$TRAVIS_BRANCH" = "master" && "$TRAVIS_PULL_REQUEST" = "false" ]]; then npm install -g npm-publish-scripts && npm-publish-scripts publish-docs --non-interactive;fi

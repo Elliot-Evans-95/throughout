@@ -1,6 +1,6 @@
-const puppeteer = require('puppeteer');
-const browserHelper = require('../src/browser');
-const url = require('../testBed/url');
+import * as puppeteer from 'puppeteer';
+import { throughoutSettings, throughoutDebug, setViewportAsDesktop } from '../src/browser';
+import { urlList } from '../testBed/url';
 
 describe('Given this is a test', () => {
 
@@ -9,12 +9,12 @@ describe('Given this is a test', () => {
     let debug;
 
     beforeAll(async () => {
-        browser = await puppeteer.launch(browserHelper.settings);
+        browser = await puppeteer.launch(throughoutSettings);
         page = await browser.newPage();
-        debug = await browserHelper.debug('Pokedex PWA Test', page);
-        browserHelper.setDesktopDefaults(page);
+        debug = await throughoutDebug('Pokedex PWA Test', page, browser);
+        setViewportAsDesktop(page);
 
-        await page.goto(url.POKEMON);
+        await page.goto(urlList.POKEMON);
     });
 
     describe('When the user clicks the pokemon link', () => {
@@ -29,7 +29,7 @@ describe('Given this is a test', () => {
     });
 
     afterAll(async () => {
-        await debug.cleanup();
-        browser.close();
+        // page.close();
+        // browser.close();
     });
 });

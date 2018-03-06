@@ -1,0 +1,15 @@
+{
+  "version": "2.4.2",
+  "compilerOptions": {
+    "lib": ["es7", "dom"],
+    "target": "es2017",
+    "module": "es6",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

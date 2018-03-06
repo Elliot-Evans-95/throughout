@@ -29,40 +29,37 @@ To use Throughout please refer to [Jest's API](https://facebook.github.io/jest/d
 Here is an example of a test
 
 ```js
-const puppeteer = require('puppeteer');
-const browserHelper = require('throughout-chrome/src/browser');
+import * as puppeteer from 'puppeteer';
+import { throughoutSettings, throughoutDebug, setViewportAsDesktop } from '../src/browser'; // imported from throughout
+import { urlList } from '../testBed/url'; // the url you are testing
 
-describe("Given this is a test", () => {
+describe('Given this is a test', () => {
 
-  let page;
-  let browser;
-  let debug;
-
-  beforeAll(async () => {
-    browser = await puppeteer.launch(browserHelper.settings);
-    page = await browser.newPage();
-    debug = await browserHelper.debug(`Pokedex PWA Test`, page);
-    browserHelper.setDesktopDefaults(page);
-
-    await page.goto(`https://www.pokedex.org/`);
-  });
-
-  describe("When the user clicks the pokemon link", () => {
+    let page;
+    let browser;
+    let debug;
 
     beforeAll(async () => {
-      await page.click('#pokemon-link');
+        browser = await puppeteer.launch(throughoutSettings);
+        page = await browser.newPage();
+        debug = await throughoutDebug('Pokedex PWA Test', page, browser); // throughout will debug for you
+        setViewportAsDesktop(page);
+
+        await page.goto(urlList.POKEMON);
     });
 
-    it("Then the pokemon list should be visible", async () => {
-      expect(await page.$('#monsters-list')).toBeTruthy();
-    });
-  });
+    describe('When the user clicks the pokemon link', () => {
 
-  afterAll(async () => {
-    await debug.cleanup();
-    browser.close();
-  });
+        beforeAll(async () => {
+            await page.click('#pokemon-link');
+        });
+
+        it('Then the pokemon list should be visible', async () => {
+            expect(await page.$('#monsters-list')).toBeTruthy();
+        });
+    });
 });
+
 
 ```
 
